@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\facturas</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/facturas.mdf">
+      <publishTime>09/30/2016 10:42:37</publishTime>
+    </File>
+    <File Include="App_Data/facturas_log.ldf">
+      <publishTime>09/30/2016 10:42:37</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/28/2016 01:18:14</publishTime>
+    </File>
+    <File Include="bin/de/PdfSharp.Charting.resources.dll">
+      <publishTime>09/28/2016 17:58:12</publishTime>
+    </File>
+    <File Include="bin/de/PdfSharp.resources.dll">
+      <publishTime>09/28/2016 17:58:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>09/28/2016 01:18:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>09/28/2016 01:18:16</publishTime>
+    </File>
+    <File Include="bin/Facturador.dll">
+      <publishTime>09/30/2016 11:26:23</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.dll">
+      <publishTime>09/28/2016 18:05:53</publishTime>
+    </File>
+    <File Include="bin/HtmlRenderer.PdfSharp.dll">
+      <publishTime>09/28/2016 18:05:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>09/28/2016 01:18:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>09/28/2016 01:18:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>09/28/2016 01:18:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>09/28/2016 01:18:33</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>09/28/2016 01:18:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>09/28/2016 01:18:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>09/28/2016 01:18:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>09/28/2016 01:18:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>09/28/2016 01:18:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>09/28/2016 01:18:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>09/28/2016 01:18:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>09/28/2016 01:18:36</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>09/28/2016 01:18:36</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/28/2016 01:18:37</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>09/28/2016 01:18:38</publishTime>
+    </File>
+    <File Include="bin/PdfSharp.Charting.dll">
+      <publishTime>09/28/2016 17:58:12</publishTime>
+    </File>
+    <File Include="bin/PdfSharp.dll">
+      <publishTime>09/28/2016 17:58:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>09/28/2016 01:18:32</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/28/2016 01:18:39</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.css">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.min.css">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>09/28/2016 01:18:43</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="css/starter-template.css">
+      <publishTime>09/28/2016 01:18:42</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>09/29/2016 00:57:36</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/28/2016 18:05:55</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>09/28/2016 02:04:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>09/28/2016 02:04:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>09/28/2016 02:04:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>09/28/2016 02:04:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>09/28/2016 02:04:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>09/28/2016 02:04:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/28/2016 02:04:19</publishTime>
+    </File>
+    <File Include="Views/facturas/Create.cshtml">
+      <publishTime>09/30/2016 01:00:00</publishTime>
+    </File>
+    <File Include="Views/facturas/Delete.cshtml">
+      <publishTime>09/30/2016 01:50:22</publishTime>
+    </File>
+    <File Include="Views/facturas/Details.cshtml">
+      <publishTime>09/29/2016 23:13:09</publishTime>
+    </File>
+    <File Include="Views/facturas/Edit.cshtml">
+      <publishTime>09/30/2016 01:46:41</publishTime>
+    </File>
+    <File Include="Views/facturas/Index.cshtml">
+      <publishTime>09/30/2016 01:50:46</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/28/2016 01:18:41</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/29/2016 19:46:50</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/28/2016 01:18:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/30/2016 11:26:40</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

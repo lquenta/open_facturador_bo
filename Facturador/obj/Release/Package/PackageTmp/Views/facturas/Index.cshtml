@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Facturador.Models.factura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de facturas</h2>
+
+<p>
+    @Html.ActionLink("Crear Factura", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empresa_nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empresa_direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empresa_nit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empresa_autorizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_facturacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente_nit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_factura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto_factura)
+        </th>
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.empresa_nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empresa_direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empresa_nit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empresa_autorizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_facturacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente_nit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_factura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto_factura)
+        </td>
+                
+        <td>
+           
+            @Html.ActionLink("Ver Factura", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.Id }) 
+        </td>
+    </tr>
+}
+
+</table>

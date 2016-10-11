@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="facturasModelStoreContainer" CdmEntityContainer="facturasEntities">
+    <EntitySetMapping Name="facturas">
+      <EntityTypeMapping TypeName="facturasModel.factura">
+        <MappingFragment StoreEntitySet="facturas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="empresa_nombre" ColumnName="empresa_nombre" />
+          <ScalarProperty Name="empresa_direccion" ColumnName="empresa_direccion" />
+          <ScalarProperty Name="empresa_nit" ColumnName="empresa_nit" />
+          <ScalarProperty Name="empresa_autorizacion" ColumnName="empresa_autorizacion" />
+          <ScalarProperty Name="lugar_fecha" ColumnName="lugar_fecha" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="cliente_nit" ColumnName="cliente_nit" />
+          <ScalarProperty Name="descripcion_factura" ColumnName="descripcion_factura" />
+          <ScalarProperty Name="monto_factura" ColumnName="monto_factura" />
+          <ScalarProperty Name="monto_literal" ColumnName="monto_literal" />
+          <ScalarProperty Name="codigo_control" ColumnName="codigo_control" />
+          <ScalarProperty Name="fecha_emision" ColumnName="fecha_emision" />
+          <ScalarProperty Name="llave_dosificacion" ColumnName="llave_dosificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

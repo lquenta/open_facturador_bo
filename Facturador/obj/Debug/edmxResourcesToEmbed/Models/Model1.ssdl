@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="facturasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="facturas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empresa_nombre" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="empresa_direccion" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="empresa_nit" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="empresa_autorizacion" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="lugar_fecha" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="cliente" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="cliente_nit" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="descripcion_factura" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="monto_factura" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_literal" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="codigo_control" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha_emision" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="llave_dosificacion" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="facturasModelStoreContainer">
+    <EntitySet Name="facturas" EntityType="Self.facturas" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

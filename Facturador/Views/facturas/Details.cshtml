@@ -1,0 +1,129 @@
+﻿@model Facturador.Models.factura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa_nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empresa_nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa_direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empresa_direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa_nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empresa_nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empresa_autorizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empresa_autorizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lugar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_facturacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_facturacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente_nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente_nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_factura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_factura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_factura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_factura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_literal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_literal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codigo_control)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo_control)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_emision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_emision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.llave_dosificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.llave_dosificacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

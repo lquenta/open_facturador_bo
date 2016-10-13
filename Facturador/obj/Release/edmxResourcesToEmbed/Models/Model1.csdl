@@ -22,5 +22,15 @@
   </EntityType>
   <EntityContainer Name="facturasEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="facturas" EntityType="Self.factura" />
+    <EntitySet Name="detalleFacturas" EntityType="facturasModel.detalleFactura" />
   </EntityContainer>
+  <EntityType Name="detalleFactura">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="idFactura" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="10" Scale="9" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

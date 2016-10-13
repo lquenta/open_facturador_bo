@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6d2963a5753240d2aba7d248280ae7a1" Name="Diagram1">
         <EntityTypeShape EntityType="facturasModel.factura" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="facturasModel.detalleFactura" Width="1.5" PointX="3.375" PointY="1.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

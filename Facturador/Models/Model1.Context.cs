@@ -26,5 +26,6 @@ namespace Facturador.Models
         }
     
         public virtual DbSet<factura> facturas { get; set; }
+        public virtual DbSet<detalleFactura> detalleFacturas { get; set; }
     }
 }

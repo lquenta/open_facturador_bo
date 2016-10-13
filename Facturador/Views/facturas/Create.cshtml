@@ -3,121 +3,206 @@
 @{
     ViewBag.Title = "Create";
 }
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
 
+
+    $(document).ready(function () {
+        $('#add').click(function () {
+               
+            //Check validation of order item
+            var isValidItem = true;
+            //Add item to list if valid
+            if ($('#Valor').val().trim() == '')
+            {
+                return;
+            }
+                
+            
+            if (isValidItem) {
+                prestamoItems.push({
+                    DescripcionTipo: $('#DescripcionTipo').val().trim(),
+                    Kilate: parseInt($('#Kilate').val().trim()),
+                    DetalleArticulo: $('#DetalleArticulo').val().trim(),
+                    Valor: parseFloat($('#Valor').val().trim()),
+                    PesoOro: parseFloat($('#PesoOro').val().trim()),
+                    PesoPiedra: parseFloat($('#PesoPiedra').val().trim()),
+                    NumLetraCambio: $('#NumLetraCambio').val().trim(),
+                    SerieLetraCambio: $('#SerieLetraCambio').val().trim(),
+                    Marca: $('#Marca').val().trim(),
+                    Tipo: $('#Tipo').val().trim(),
+                    Color: $('#Color').val().trim(),
+                    Motor: $('#Motor').val().trim(),
+                    Chasis: $('#Chasis').val().trim(),
+                    Placa: $('#Placa').val().trim(),
+                    Poliza: $('#Poliza').val().trim(),
+                    Año: $('#Año').val().trim()
+
+                });
+
+                //Clear fields
+                $('#DescripcionTipo').val('').focus();
+                $('#Kilate,#DetalleArticulo,#Valor,#PesoOro,#PesoPiedra,#NumLetraCambio,#SerieLetraCambio,#Marca,#Tipo,#Color,#Motor,#Chasis,#Placa,#Poliza,#Año').val('');
+
+            }
+            //populate order items
+            console.log(prestamoItems);
+            GeneratedItemsTable();
+
+        });
+    });
+ </script>   
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+        @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>factura</h4>
-        <hr />
+                <h4>factura</h4>
+                <hr />
         @Html.ValidationSummary(true)
-       
-        <div class="form-group">
-            @Html.LabelFor(model => model.empresa_nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.empresa_nombre)
-                @Html.ValidationMessageFor(model => model.empresa_nombre)
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.empresa_nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.empresa_nombre)
+        @Html.ValidationMessageFor(model => model.empresa_nombre)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.empresa_direccion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.empresa_direccion)
+        @Html.ValidationMessageFor(model => model.empresa_direccion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.empresa_nit, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.empresa_nit)
+        @Html.ValidationMessageFor(model => model.empresa_nit)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.empresa_autorizacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.empresa_autorizacion)
+        @Html.ValidationMessageFor(model => model.empresa_autorizacion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.lugar, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.lugar)
+        @Html.ValidationMessageFor(model => model.lugar)
+                    </div>
+                </div>
+                <div class="form-group">
+        @Html.LabelFor(model => model.fecha_facturacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.TextBoxFor(model => model.fecha_facturacion, new { type = "date" })
+        @Html.ValidationMessageFor(model => model.fecha_facturacion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.cliente, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.cliente)
+        @Html.ValidationMessageFor(model => model.cliente)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.cliente_nit, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.cliente_nit)
+        @Html.ValidationMessageFor(model => model.cliente_nit)
+                    </div>
+                </div>
+
+
+                <section id="detalleFActuras">
+                    <h3>Detalle de Facturas</h3>
+                    <div class="row">
+                        <table class="table table-hover">
+                            <tr id="head_detalle">
+                                <td>Descripcion</td>
+                                <td>Presio Unitario</td>
+                                <td>Cantidad</td>
+                                <td>Presio Final</td>
+
+                                <td></td>
+                            </tr>
+                            <tr id="body_detalleFacturas">
+                                <td>
+                                    <input type="text" name="" class="form-control" id="Descripcion" value="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" class="form-control" id="PresioUnitario" value="">
+                                </td>
+                                <td class="joya">
+                                    <input type="text" name="" class="form-control " id="Cantidad" value="0">
+                                </td>
+                                <td class="joya">
+                                    <input type="text" name="" class="form-control " id="PresioFinal" value="">
+                                </td>
+
+                                <td><input type="button" class="btn btn-primary" id="add" value="Añadir" /></td>
+                            </tr>
+                        </table>
+                        <div id="detalleItems" class="row"></div>
+                    </div>
+
+                </section>
+
+
+
+
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.descripcion_factura, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.descripcion_factura)
+        @Html.ValidationMessageFor(model => model.descripcion_factura)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.monto_factura, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.monto_factura)
+        @Html.ValidationMessageFor(model => model.monto_factura)
+                    </div>
+                </div>
+
+                <div class="form-group">
+        @Html.LabelFor(model => model.llave_dosificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+        @Html.EditorFor(model => model.llave_dosificacion)
+        @Html.ValidationMessageFor(model => model.llave_dosificacion)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
             </div>
+    }
+
+        <div>
+        @Html.ActionLink("Back to List", "Index")
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.empresa_direccion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.empresa_direccion)
-                @Html.ValidationMessageFor(model => model.empresa_direccion)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.empresa_nit, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.empresa_nit)
-                @Html.ValidationMessageFor(model => model.empresa_nit)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.empresa_autorizacion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.empresa_autorizacion)
-                @Html.ValidationMessageFor(model => model.empresa_autorizacion)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.lugar, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.lugar)
-                @Html.ValidationMessageFor(model => model.lugar)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.fecha_facturacion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.fecha_facturacion, new { type = "date" })
-                @Html.ValidationMessageFor(model => model.fecha_facturacion)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.cliente, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.cliente)
-                @Html.ValidationMessageFor(model => model.cliente)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.cliente_nit, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.cliente_nit)
-                @Html.ValidationMessageFor(model => model.cliente_nit)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.descripcion_factura, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.descripcion_factura)
-                @Html.ValidationMessageFor(model => model.descripcion_factura)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.monto_factura, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.monto_factura)
-                @Html.ValidationMessageFor(model => model.monto_factura)
-            </div>
-        </div>
-
-       
-     
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.llave_dosificacion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.llave_dosificacion)
-                @Html.ValidationMessageFor(model => model.llave_dosificacion)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
